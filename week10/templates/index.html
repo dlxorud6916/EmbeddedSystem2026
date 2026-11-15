@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Raspberry Pi 환경 대시보드</title>
+</head>
+<body>
+    <!-- 값 표시 영역과 LED 제어 버튼 -->
+    <main>
+        <h1>Raspberry Pi 환경 모니터</h1>
+        <p>온도: <strong id="temperature">--</strong> °C</p>
+        <p>습도: <strong id="humidity">--</strong> %</p>
+        <p>센서: <span id="sensor-status">INIT</span></p>
+        <p>LED 상태: <span id="led-state">--</span></p>
+        <p>제어 모드: <span id="mode">--</span></p>
+        <p>갱신: <time id="updated-at">--</time></p>
+        
+        <button data-state="on">LED ON</button>
+        <button data-state="off">LED OFF</button>
+        <p id="message" aria-live="polite"></p>
+    </main>
+
+    <!-- 자바스크립트 연동을 위한 스크립트 태그[cite: 35] -->
+    <script src="/static/dashboard.js"></script>
+</body>
+</html>
